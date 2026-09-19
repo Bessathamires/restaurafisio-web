@@ -7,11 +7,95 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <main>
-      <h1>RestauraFisio+</h1>
-      <p>Aplicação inicial para gestão de pacientes.</p>
-      <a href="pages/pacientes.html">Ir para pacientes</a>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html" aria-label="RestauraFisio+ - Dashboard">
+          <span class="brand-mark">RF</span>
+          <span>
+            <strong>RestauraFisio<span>+</span></strong>
+            <small>Gestão fisioterapêutica</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <p class="nav-label">Menu principal</p>
+          <a class="nav-link active" href="index.html" aria-current="page">
+            <span class="nav-icon">⌂</span>
+            <span>Dashboard</span>
+          </a>
+          <a class="nav-link" href="pages/pacientes.html">
+            <span class="nav-icon">♙</span>
+            <span>Pacientes</span>
+          </a>
+
+          <p class="nav-label nav-label-spaced">Em breve</p>
+          <span class="nav-link disabled" aria-disabled="true">
+            <span class="nav-icon">↗</span>
+            <span>Evoluções</span>
+            <small>Em breve</small>
+          </span>
+          <span class="nav-link disabled" aria-disabled="true">
+            <span class="nav-icon">$</span>
+            <span>Financeiro</span>
+            <small>Em breve</small>
+          </span>
+          <span class="nav-link disabled" aria-disabled="true">
+            <span class="nav-icon">▤</span>
+            <span>Relatórios</span>
+            <small>Em breve</small>
+          </span>
+        </nav>
+
+        <div class="sidebar-footer">
+          <span class="footer-dot"></span>
+          <span>Sistema em implantação</span>
+        </div>
+      </aside>
+
+      <main class="dashboard">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Visão geral</p>
+            <h1>Olá, seja bem-vindo(a)!</h1>
+          </div>
+          <div class="profile" aria-label="Perfil do usuário">
+            <span class="profile-avatar">DR</span>
+            <span class="profile-name">Dra. Responsável</span>
+          </div>
+        </header>
+
+        <section class="welcome-panel" aria-labelledby="welcome-title">
+          <div class="welcome-copy">
+            <p class="eyebrow light">Seu espaço de cuidado</p>
+            <h2 id="welcome-title">Organize sua rotina clínica com mais clareza.</h2>
+            <p>O RestauraFisio+ ajuda você a manter o cadastro dos seus pacientes acessível e organizado em um só lugar.</p>
+            <a class="primary-action" href="pages/pacientes.html">Acessar pacientes <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="welcome-shape" aria-hidden="true">
+            <span class="shape-ring"></span>
+            <span class="shape-cross">+</span>
+          </div>
+        </section>
+
+        <section class="section-heading" aria-labelledby="module-title">
+          <div>
+            <p class="eyebrow">Módulo disponível</p>
+            <h2 id="module-title">Comece por aqui</h2>
+          </div>
+        </section>
+
+        <article class="module-card">
+          <div class="module-icon">♙</div>
+          <div class="module-content">
+            <h3>Gerenciamento de pacientes</h3>
+            <p>Cadastre, consulte e acompanhe as informações dos seus pacientes.</p>
+          </div>
+          <a class="secondary-action" href="pages/pacientes.html">Abrir módulo <span aria-hidden="true">→</span></a>
+        </article>
+
+        <p class="dashboard-note">Mais recursos serão disponibilizados nas próximas etapas do RestauraFisio+.</p>
+      </main>
+    </div>
 
     <script src="assets/js/app.js"></script>
   </body>
