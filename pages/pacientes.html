@@ -67,15 +67,15 @@
         <section class="patient-toolbar" aria-label="Ações de pacientes">
           <label class="search-field">
             <span>Buscar por nome ou CPF</span>
-            <input type="search" placeholder="Digite o nome ou CPF" />
+            <input id="patient-search" type="search" placeholder="Digite o nome ou CPF" />
           </label>
           <details class="new-patient">
             <summary class="primary-action">Novo paciente <span aria-hidden="true">+</span></summary>
-            <div class="patient-form-panel">
+            <div class="patient-form-panel" id="patient-form-panel">
               <div class="section-heading form-heading">
                 <div>
-                  <p class="eyebrow">Cadastro inicial</p>
-                  <h2>Dados do paciente</h2>
+                  <p class="eyebrow" id="form-mode-label">Cadastro inicial</p>
+                  <h2 id="form-title">Dados do paciente</h2>
                 </div>
               </div>
               <form class="patient-form" id="patient-form" novalidate>
@@ -95,7 +95,7 @@
                   <span>Telefone/WhatsApp</span>
                   <input id="patient-phone" type="tel" name="telefone" placeholder="(00) 00000-0000" required />
                 </label>
-                <button class="form-submit" type="submit">Cadastrar paciente</button>
+                <button class="form-submit" id="form-submit" type="submit">Cadastrar paciente</button>
                 <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
               </form>
             </div>
@@ -112,8 +112,8 @@
           </div>
           <div class="empty-state" id="empty-state">
             <div class="module-icon" aria-hidden="true">♙</div>
-            <h3>Nenhum paciente cadastrado</h3>
-            <p>Os pacientes cadastrados aparecerão nesta área.</p>
+            <h3 id="empty-state-title">Nenhum paciente cadastrado</h3>
+            <p id="empty-state-message">Os pacientes cadastrados aparecerão nesta área.</p>
           </div>
           <div class="patient-list-items" id="patient-list-items"></div>
         </section>

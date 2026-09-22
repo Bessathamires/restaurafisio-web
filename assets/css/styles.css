@@ -448,6 +448,11 @@ h1 {
   box-shadow: 0 8px 22px rgba(27, 73, 103, .08);
 }
 
+.patient-form-panel.is-editing {
+  border-color: #9fc6dc;
+  box-shadow: 0 8px 22px rgba(23, 105, 170, .12);
+}
+
 .form-heading {
   margin: 0 0 20px;
 }
@@ -568,24 +573,60 @@ h1 {
   font-size: 15px;
 }
 
-.patient-card dl {
+.patient-card-details {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px 20px;
-  margin: 0;
 }
 
-.patient-card dt {
+.patient-card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.patient-card-label {
   margin-bottom: 3px;
   color: var(--muted);
   font-size: 10px;
   font-weight: bold;
 }
 
-.patient-card dd {
-  margin: 0;
+.patient-card-value {
   color: var(--text);
   font-size: 12px;
+}
+
+.patient-card-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.card-action {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid #c4ddea;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.edit-action {
+  color: var(--blue-700);
+}
+
+.delete-action {
+  color: #b44949;
+  border-color: #e5c4c4;
+}
+
+.edit-action:hover,
+.delete-action:hover {
+  filter: brightness(.95);
 }
 
 @media (max-width: 760px) {
@@ -689,7 +730,7 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .patient-card dl {
+  .patient-card-details {
     grid-template-columns: 1fr;
   }
 
