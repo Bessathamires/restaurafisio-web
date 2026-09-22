@@ -78,24 +78,25 @@
                   <h2>Dados do paciente</h2>
                 </div>
               </div>
-              <form class="patient-form">
+              <form class="patient-form" id="patient-form" novalidate>
                 <label>
                   <span>Nome completo</span>
-                  <input type="text" name="nome" placeholder="Digite o nome completo" />
+                  <input id="patient-name" type="text" name="nome" placeholder="Digite o nome completo" required />
                 </label>
                 <label>
                   <span>CPF</span>
-                  <input type="text" name="cpf" placeholder="000.000.000-00" />
+                  <input id="patient-cpf" type="text" name="cpf" placeholder="000.000.000-00" required />
                 </label>
                 <label>
                   <span>Data de nascimento</span>
-                  <input type="date" name="data-nascimento" />
+                  <input id="patient-birth-date" type="date" name="data-nascimento" required />
                 </label>
                 <label>
                   <span>Telefone/WhatsApp</span>
-                  <input type="tel" name="telefone" placeholder="(00) 00000-0000" />
+                  <input id="patient-phone" type="tel" name="telefone" placeholder="(00) 00000-0000" required />
                 </label>
-                <button class="form-submit" type="button">Cadastrar paciente</button>
+                <button class="form-submit" type="submit">Cadastrar paciente</button>
+                <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
               </form>
             </div>
           </details>
@@ -107,13 +108,14 @@
               <p class="eyebrow">Acompanhamento</p>
               <h2 id="patient-list-title">Lista de pacientes</h2>
             </div>
-            <span class="patient-count">0 pacientes</span>
+            <span class="patient-count" id="patient-count">0 pacientes</span>
           </div>
-          <div class="empty-state">
+          <div class="empty-state" id="empty-state">
             <div class="module-icon" aria-hidden="true">♙</div>
             <h3>Nenhum paciente cadastrado</h3>
             <p>Os pacientes cadastrados aparecerão nesta área.</p>
           </div>
+          <div class="patient-list-items" id="patient-list-items"></div>
         </section>
       </main>
     </div>

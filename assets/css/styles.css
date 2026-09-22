@@ -416,6 +416,10 @@ h1 {
   border-color: var(--blue-500);
 }
 
+.patient-form input.input-error {
+  border-color: #c95757;
+}
+
 .new-patient {
   position: relative;
 }
@@ -479,6 +483,21 @@ h1 {
   background: var(--blue-900);
 }
 
+.form-feedback {
+  min-height: 16px;
+  grid-column: 1 / -1;
+  margin: -5px 0 0;
+  font-size: 11px;
+}
+
+.form-feedback.error {
+  color: #b44949;
+}
+
+.form-feedback.success {
+  color: #39815e;
+}
+
 .patient-list {
   margin-top: 34px;
 }
@@ -506,6 +525,10 @@ h1 {
   text-align: center;
 }
 
+.empty-state[hidden] {
+  display: none;
+}
+
 .empty-state .module-icon {
   width: 42px;
   height: 42px;
@@ -522,6 +545,46 @@ h1 {
 .empty-state p {
   margin-bottom: 0;
   color: var(--muted);
+  font-size: 12px;
+}
+
+.patient-list-items {
+  display: grid;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.patient-card {
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 5px 15px rgba(27, 73, 103, .04);
+}
+
+.patient-card h3 {
+  margin-bottom: 15px;
+  color: var(--blue-900);
+  font-size: 15px;
+}
+
+.patient-card dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px 20px;
+  margin: 0;
+}
+
+.patient-card dt {
+  margin-bottom: 3px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.patient-card dd {
+  margin: 0;
+  color: var(--text);
   font-size: 12px;
 }
 
@@ -623,6 +686,10 @@ h1 {
   }
 
   .patient-form {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-card dl {
     grid-template-columns: 1fr;
   }
 
