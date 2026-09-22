@@ -7,11 +7,116 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body>
-    <main>
-      <h1>Pacientes</h1>
-      <p>Página inicial do módulo de pacientes.</p>
-      <a href="../index.html">Voltar para a página inicial</a>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="../index.html" aria-label="RestauraFisio+ - Dashboard">
+          <span class="brand-mark">RF</span>
+          <span>
+            <strong>RestauraFisio<span>+</span></strong>
+            <small>Gestão fisioterapêutica</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <p class="nav-label">Menu principal</p>
+          <a class="nav-link" href="../index.html">
+            <span class="nav-icon">⌂</span>
+            <span>Dashboard</span>
+          </a>
+          <a class="nav-link active" href="pacientes.html" aria-current="page">
+            <span class="nav-icon">♙</span>
+            <span>Pacientes</span>
+          </a>
+
+          <p class="nav-label nav-label-spaced">Em breve</p>
+          <span class="nav-link disabled" aria-disabled="true">
+            <span class="nav-icon">↗</span>
+            <span>Evoluções</span>
+            <small>Em breve</small>
+          </span>
+          <span class="nav-link disabled" aria-disabled="true">
+            <span class="nav-icon">$</span>
+            <span>Financeiro</span>
+            <small>Em breve</small>
+          </span>
+          <span class="nav-link disabled" aria-disabled="true">
+            <span class="nav-icon">▤</span>
+            <span>Relatórios</span>
+            <small>Em breve</small>
+          </span>
+        </nav>
+
+        <div class="sidebar-footer">
+          <span class="footer-dot"></span>
+          <span>Sistema em implantação</span>
+        </div>
+      </aside>
+
+      <main class="dashboard patient-page">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Módulo disponível</p>
+            <h1>Pacientes</h1>
+          </div>
+          <div class="profile" aria-label="Perfil do usuário">
+            <span class="profile-avatar">DR</span>
+            <span class="profile-name">Dra. Responsável</span>
+          </div>
+        </header>
+
+        <section class="patient-toolbar" aria-label="Ações de pacientes">
+          <label class="search-field">
+            <span>Buscar por nome ou CPF</span>
+            <input type="search" placeholder="Digite o nome ou CPF" />
+          </label>
+          <details class="new-patient">
+            <summary class="primary-action">Novo paciente <span aria-hidden="true">+</span></summary>
+            <div class="patient-form-panel">
+              <div class="section-heading form-heading">
+                <div>
+                  <p class="eyebrow">Cadastro inicial</p>
+                  <h2>Dados do paciente</h2>
+                </div>
+              </div>
+              <form class="patient-form">
+                <label>
+                  <span>Nome completo</span>
+                  <input type="text" name="nome" placeholder="Digite o nome completo" />
+                </label>
+                <label>
+                  <span>CPF</span>
+                  <input type="text" name="cpf" placeholder="000.000.000-00" />
+                </label>
+                <label>
+                  <span>Data de nascimento</span>
+                  <input type="date" name="data-nascimento" />
+                </label>
+                <label>
+                  <span>Telefone/WhatsApp</span>
+                  <input type="tel" name="telefone" placeholder="(00) 00000-0000" />
+                </label>
+                <button class="form-submit" type="button">Cadastrar paciente</button>
+              </form>
+            </div>
+          </details>
+        </section>
+
+        <section class="patient-list" aria-labelledby="patient-list-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Acompanhamento</p>
+              <h2 id="patient-list-title">Lista de pacientes</h2>
+            </div>
+            <span class="patient-count">0 pacientes</span>
+          </div>
+          <div class="empty-state">
+            <div class="module-icon" aria-hidden="true">♙</div>
+            <h3>Nenhum paciente cadastrado</h3>
+            <p>Os pacientes cadastrados aparecerão nesta área.</p>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <script src="../assets/js/pacientes.js"></script>
   </body>

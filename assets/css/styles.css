@@ -362,6 +362,169 @@ h1 {
   text-align: center;
 }
 
+.patient-page .topbar {
+  margin-bottom: 29px;
+}
+
+.patient-toolbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 5px 15px rgba(27, 73, 103, .04);
+}
+
+.search-field,
+.patient-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--blue-900);
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.search-field {
+  flex: 1;
+}
+
+.search-field input,
+.patient-form input {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 13px;
+  border: 1px solid #cbdde8;
+  border-radius: 5px;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  background: #fbfdfe;
+}
+
+.search-field input::placeholder,
+.patient-form input::placeholder {
+  color: #9aaab6;
+  font-weight: normal;
+}
+
+.search-field input:focus,
+.patient-form input:focus {
+  outline: 2px solid rgba(44, 141, 204, .2);
+  border-color: var(--blue-500);
+}
+
+.new-patient {
+  position: relative;
+}
+
+.new-patient summary {
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.new-patient summary::-webkit-details-marker {
+  display: none;
+}
+
+.new-patient[open] summary {
+  background: var(--blue-900);
+}
+
+.patient-form-panel {
+  width: min(100%, 620px);
+  margin-top: 16px;
+  padding: 23px 25px 25px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 8px 22px rgba(27, 73, 103, .08);
+}
+
+.form-heading {
+  margin: 0 0 20px;
+}
+
+.form-heading h2,
+.patient-list h2 {
+  font-size: 18px;
+}
+
+.patient-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 16px;
+}
+
+.form-submit {
+  justify-self: start;
+  grid-column: 1 / -1;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  background: var(--blue-700);
+  cursor: pointer;
+  box-shadow: 0 4px 9px rgba(10, 55, 91, .12);
+}
+
+.form-submit:hover {
+  background: var(--blue-900);
+}
+
+.patient-list {
+  margin-top: 34px;
+}
+
+.patient-list .section-heading {
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.patient-count {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.empty-state {
+  display: flex;
+  min-height: 205px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+  border: 1px dashed #cbdde8;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .58);
+  text-align: center;
+}
+
+.empty-state .module-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 13px;
+  font-size: 20px;
+}
+
+.empty-state h3 {
+  margin-bottom: 6px;
+  color: var(--blue-900);
+  font-size: 15px;
+}
+
+.empty-state p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 @media (max-width: 760px) {
   .app-shell {
     display: block;
@@ -424,6 +587,19 @@ h1 {
     flex-wrap: wrap;
   }
 
+  .patient-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .new-patient summary {
+    justify-content: center;
+  }
+
+  .patient-form-panel {
+    width: 100%;
+  }
+
   .secondary-action {
     margin-left: 66px;
   }
@@ -444,5 +620,15 @@ h1 {
 
   .module-content {
     flex-basis: calc(100% - 66px);
+  }
+
+  .patient-form {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-list .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
   }
 }
