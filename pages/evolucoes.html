@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evolução Fisioterapêutica | RestauraFisio+</title>
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/evolucoes.js" defer></script>
+</head>
+
+<body>
+
+<main class="evolution-page">
+
+    <header class="evolution-header">
+        <p class="eyebrow">RESTAURAFISIO+ | PRONTUÁRIO DIGITAL</p>
+        <h1>Registro de Evolução Fisioterapêutica</h1>
+        <p>Registre os atendimentos e acompanhe a evolução clínica dos pacientes.</p>
+    </header>
+
+    <section class="evolution-card">
+
+        <h2>Dados do atendimento</h2>
+
+        <form id="evolution-form" class="evolution-form">
+
+            <div class="evolution-field">
+                <label for="patient">Paciente *</label>
+                <select id="patient" required>
+                    <option value="">Selecione um paciente</option>
+                </select>
+            </div>
+
+            <div class="evolution-field">
+                <label for="date">Data do atendimento *</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="evolution-field evolution-full">
+                <label for="professional">Profissional responsável *</label>
+                <input
+                    type="text"
+                    id="professional"
+                    placeholder="Nome do fisioterapeuta"
+                    required
+                >
+            </div>
+
+            <div class="evolution-field evolution-full">
+                <label for="condition">Condição clínica *</label>
+                <textarea
+                    id="condition"
+                    placeholder="Descreva as condições clínicas apresentadas pelo paciente..."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="evolution-field evolution-full">
+                <label for="procedures">Condutas fisioterapêuticas realizadas *</label>
+                <textarea
+                    id="procedures"
+                    placeholder="Descreva os exercícios, técnicas e procedimentos realizados..."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="evolution-field evolution-full">
+                <label for="response">Resposta ao tratamento *</label>
+                <textarea
+                    id="response"
+                    placeholder="Descreva a resposta do paciente às intervenções..."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="evolution-field evolution-full">
+                <label for="complications">Intercorrências</label>
+                <textarea
+                    id="complications"
+                    placeholder="Registre possíveis intercorrências durante o atendimento..."
+                ></textarea>
+            </div>
+
+            <div class="evolution-field evolution-full">
+                <label for="observations">Observações adicionais</label>
+                <textarea
+                    id="observations"
+                    placeholder="Informações complementares..."
+                ></textarea>
+            </div>
+
+            <p id="form-feedback" class="form-feedback evolution-full"
+               role="status" aria-live="polite"></p>
+
+            <div class="evolution-actions">
+
+                <a href="pacientes.html" class="evolution-back">
+                    ← Voltar para pacientes
+                </a>
+
+                <button type="submit" class="evolution-button">
+                    Registrar evolução
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+</body>
+</html>

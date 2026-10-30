@@ -740,3 +740,174 @@ h1 {
     gap: 8px;
   }
 }
+
+/* =====================================
+   SPRINT 02 - EVOLUÇÃO FISIOTERAPÊUTICA
+===================================== */
+
+.evolution-page {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+.evolution-header {
+  margin-bottom: 30px;
+}
+
+.evolution-header h1 {
+  color: var(--blue-900);
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.evolution-header p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.evolution-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 5px 20px rgba(27, 73, 103, 0.06);
+}
+
+.evolution-card h2 {
+  color: var(--blue-900);
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.evolution-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.evolution-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.evolution-field label {
+  color: var(--blue-900);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.evolution-field input,
+.evolution-field select,
+.evolution-field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbdde8;
+  border-radius: 6px;
+  background: #fbfdfe;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.evolution-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.evolution-field input:focus,
+.evolution-field select:focus,
+.evolution-field textarea:focus {
+  outline: 2px solid rgba(44, 141, 204, 0.2);
+  border-color: var(--blue-500);
+}
+
+.evolution-full {
+  grid-column: 1 / -1;
+}
+
+.evolution-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  grid-column: 1 / -1;
+  margin-top: 15px;
+}
+
+.evolution-button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 6px;
+  background: var(--blue-700);
+  color: white;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.evolution-button:hover {
+  background: var(--blue-900);
+}
+
+.evolution-back {
+  color: var(--blue-700);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .evolution-page {
+    padding: 25px 15px;
+  }
+
+  .evolution-card {
+    padding: 20px;
+  }
+
+  .evolution-form {
+    grid-template-columns: 1fr;
+  }
+
+  .evolution-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .evolution-button {
+    width: 100%;
+  }
+}
+
+/* Personalização visual - Sprint 02 */
+
+body:has(.evolution-page) {
+  background: linear-gradient(
+    135deg,
+    #c4e2f5 0%,
+    #d9ecf9 50%,
+    #a9d4f0 100%
+  );
+  min-height: 100vh;
+}
+
+.evolution-card {
+  border-top: 4px solid var(--orange);
+  box-shadow: 0 8px 28px rgba(18, 60, 103, 0.09);
+}
+
+.evolution-header h1 {
+  border-left: 4px solid var(--orange);
+  padding-left: 14px;
+}
+
+.evolution-button {
+  background: var(--blue-700);
+  transition: background 0.2s ease;
+}
+
+.evolution-button:hover {
+  background: var(--blue-900);
+}
